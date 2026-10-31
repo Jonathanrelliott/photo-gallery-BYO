@@ -5,7 +5,7 @@ const links = [
   { href: "/#features", label: "Features" },
   { href: "/#storage", label: "Bring your bucket" },
   { href: "/#pricing", label: "Pricing" },
-  { href: "/g/conservatory-after-dark", label: "Demo gallery" },
+  { href: "/g/rush-lacrosse-senior-night", label: "Demo gallery" },
 ];
 
 export function SiteHeader() {

@@ -32,7 +32,7 @@ const dims: [number, number][] = [
   [1600, 1000],
 ];
 
-export const photos: Photo[] = Array.from({ length: 18 }, (_, i) => {
+const illustrations: Photo[] = Array.from({ length: 18 }, (_, i) => {
   const [width, height] = dims[i % dims.length];
   const n = String(i + 1).padStart(2, "0");
   return {
@@ -45,6 +45,18 @@ export const photos: Photo[] = Array.from({ length: 18 }, (_, i) => {
   };
 });
 
+// Real EditGenlx shots, indexes 18-20.
+const realShots: Photo[] = ["_PIC0282", "_PIC2655", "_PIC2656"].map((name, i) => ({
+  id: `e${i + 1}`,
+  src: `/demo/editgenlx-0${i + 1}.jpg`,
+  width: 675,
+  height: 900,
+  name: `${name}.jpg`,
+  favorite: i === 0,
+}));
+
+export const photos: Photo[] = [...illustrations, ...realShots];
+
 export const currentUser = {
   name: "Ivy Okafor",
   email: "ivy@verdantlens.studio",
@@ -55,37 +67,37 @@ export const currentUser = {
 
 export const galleries: Gallery[] = [
   {
-    id: "conservatory-after-dark",
-    title: "Conservatory After Dark",
-    client: "Marlowe & Finch",
+    id: "rush-lacrosse-senior-night",
+    title: "Rush Lacrosse: Senior Night",
+    client: "Rush Lacrosse Club",
     date: "2026-10-18",
     status: "published",
-    coverIndex: 4,
-    photoIds: [4, 0, 2, 7, 10, 12, 14, 1, 5, 16, 8, 3],
+    coverIndex: 18,
+    photoIds: [18, 4, 19, 0, 20, 2, 7, 10, 12, 14, 1, 5, 16, 8, 3],
     views: 1284,
     downloads: 96,
     storageProviderId: "cloudflare-r2",
   },
   {
-    id: "moss-and-concrete",
-    title: "Moss & Concrete",
-    client: "Urban Flora Collective",
+    id: "varsity-baseball-home-opener",
+    title: "Varsity Baseball Home Opener",
+    client: "Varsity Baseball",
     date: "2026-10-02",
     status: "published",
-    coverIndex: 10,
-    photoIds: [10, 11, 13, 15, 6, 9, 17, 2],
+    coverIndex: 19,
+    photoIds: [19, 10, 11, 13, 15, 6, 9, 17, 2],
     views: 642,
     downloads: 41,
     storageProviderId: "cloudflare-r2",
   },
   {
-    id: "greenhouse-wedding",
-    title: "Greenhouse Wedding: Ada & Theo",
-    client: "Ada Lindqvist",
+    id: "softball-sectional-win",
+    title: "Softball Sectional Win",
+    client: "Varsity Softball",
     date: "2026-09-21",
     status: "published",
-    coverIndex: 17,
-    photoIds: [17, 16, 14, 12, 0, 1, 3, 5, 7, 9, 11],
+    coverIndex: 20,
+    photoIds: [20, 17, 16, 14, 12, 0, 1, 3, 5, 7, 9, 11],
     views: 3120,
     downloads: 214,
     storageProviderId: "aws-s3",

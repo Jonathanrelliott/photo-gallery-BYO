@@ -10,7 +10,7 @@ export default function LoginPage() {
   return (
     <div className="grid min-h-screen lg:grid-cols-2">
       <div className="relative hidden overflow-hidden lg:block">
-        <Photo src={photos[17].src} alt="" className="absolute inset-0 h-full w-full object-cover" />
+        <Photo src={photos[18].src} alt="" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/30 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 p-12">
           <blockquote className="max-w-md font-display text-3xl leading-snug text-white">

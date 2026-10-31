@@ -62,7 +62,7 @@ export default function HomePage() {
               <ButtonLink href="/login?mode=signup" size="lg">
                 Start free <ArrowRight className="size-4" />
               </ButtonLink>
-              <ButtonLink href="/g/conservatory-after-dark" variant="secondary" size="lg">
+              <ButtonLink href="/g/rush-lacrosse-senior-night" variant="secondary" size="lg">
                 View a demo gallery
               </ButtonLink>
             </div>
@@ -76,13 +76,13 @@ export default function HomePage() {
           <div className="relative h-[520px] lg:h-[620px]">
             <div className="absolute -inset-10 rounded-full bg-lime/10 blur-3xl" />
             <div className="absolute left-0 top-6 w-[58%] overflow-hidden rounded-3xl ring-1 ring-white/10 shadow-2xl">
-              <Photo src={photos[0].src} alt="" className="aspect-[4/5] w-full object-cover" />
+              <Photo src={photos[18].src} alt="" className="aspect-[4/5] w-full object-cover" />
             </div>
             <div className="absolute right-0 top-0 w-[44%] overflow-hidden rounded-3xl ring-1 ring-white/10 shadow-2xl">
-              <Photo src={photos[17].src} alt="" className="aspect-[4/5] w-full object-cover" />
+              <Photo src={photos[19].src} alt="" className="aspect-[4/5] w-full object-cover" />
             </div>
             <div className="absolute bottom-0 right-6 w-[52%] overflow-hidden rounded-3xl ring-1 ring-lime/30 shadow-glow">
-              <Photo src={photos[4].src} alt="" className="aspect-[16/10] w-full object-cover" />
+              <Photo src={photos[20].src} alt="" className="aspect-[16/10] object-[center_30%] w-full object-cover" />
             </div>
             <div className="glass absolute bottom-14 left-4 flex items-center gap-3 rounded-2xl px-4 py-3">
               <span className="grid size-9 place-items-center rounded-full bg-lime/15 text-lime">
@@ -129,12 +129,12 @@ export default function HomePage() {
               <Eyebrow>The client view</Eyebrow>
               <h2 className="mt-4 font-display text-4xl tracking-tight text-white">A dark room for every frame.</h2>
             </div>
-            <ButtonLink href="/g/conservatory-after-dark" variant="secondary">
+            <ButtonLink href="/g/rush-lacrosse-senior-night" variant="secondary">
               Open the demo <ArrowRight className="size-4" />
             </ButtonLink>
           </div>
           <div className="mt-12 columns-2 gap-4 md:columns-4 [&>*]:mb-4">
-            {[2, 7, 10, 13, 5, 16, 8, 11].map((i) => (
+            {[18, 7, 19, 13, 20, 16, 8, 11].map((i) => (
               <div key={i} className="overflow-hidden rounded-2xl ring-1 ring-white/5">
                 <Photo src={photos[i].src} alt="" className="w-full transition duration-700 hover:scale-105" />
               </div>

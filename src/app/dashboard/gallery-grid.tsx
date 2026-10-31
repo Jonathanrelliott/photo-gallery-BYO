@@ -36,7 +36,7 @@ export function GalleryGrid({ initial }: { initial: Gallery[] }) {
         client: String(data.get("client")) || "Personal",
         date: new Date().toISOString().slice(0, 10),
         status: "draft",
-        coverIndex: Math.floor(Math.random() * 18),
+        coverIndex: 18 + Math.floor(Math.random() * 3),
         photoIds: [],
         views: 0,
         downloads: 0,
