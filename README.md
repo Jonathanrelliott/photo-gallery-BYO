@@ -37,6 +37,12 @@ Placeholder photos in `public/demo` are generated with `node scripts/generate-de
 
 Provider definitions live in `src/lib/providers.ts`; mock data lives in `src/lib/mock-data.ts`.
 
+## GitHub Pages
+
+Every push to `main` builds a static export and deploys it with `.github/workflows/pages.yml`. One-time setup: in the repo go to **Settings → Pages** and set **Source** to **GitHub Actions**. The site is served at `https://<user>.github.io/photo-gallery-BYO/`.
+
+Build the Pages version locally with `GITHUB_PAGES=true npm run build` (output in `out/`). The static export has no server, so it's a click-through preview; Supabase auth and storage will need Vercel or another server host.
+
 ## Supabase MCP
 
 `.mcp.json` registers the Supabase MCP server for Claude Code. To authenticate, run `claude /mcp` in a regular terminal, pick `supabase` and choose Authenticate.

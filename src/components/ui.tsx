@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ComponentProps, ReactNode } from "react";
-import { site } from "@/lib/site";
+import { asset, site } from "@/lib/site";
 
 export function cx(...classes: (string | false | null | undefined)[]) {
   return classes.filter(Boolean).join(" ");
@@ -11,7 +11,7 @@ export function Logo({ className }: { className?: string }) {
     <Link href="/" className={cx("group inline-flex items-center gap-2.5", className)}>
       {site.logo ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={site.logo} alt="" className="size-9 object-contain transition group-hover:drop-shadow-[0_0_10px_rgb(198_255_61/0.6)]" />
+        <img src={asset(site.logo)} alt="" className="size-9 object-contain transition group-hover:drop-shadow-[0_0_10px_rgb(198_255_61/0.6)]" />
       ) : (
         <span className="relative grid size-8 place-items-center rounded-full bg-moss-800 ring-1 ring-lime/40 transition group-hover:shadow-glow">
           <svg viewBox="0 0 24 24" className="size-4.5 text-lime" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -93,7 +93,7 @@ export function Photo({ src, alt, className }: { src: string; alt: string; class
   // Plain img: user photos come from arbitrary customer buckets, so next/image
   // remote patterns can't be known ahead of time.
   // eslint-disable-next-line @next/next/no-img-element
-  return <img src={src} alt={alt} loading="lazy" className={cx("block", className)} />;
+  return <img src={asset(src)} alt={alt} loading="lazy" className={cx("block", className)} />;
 }
 
 export function Eyebrow({ children }: { children: ReactNode }) {

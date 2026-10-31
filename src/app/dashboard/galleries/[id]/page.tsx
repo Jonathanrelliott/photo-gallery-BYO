@@ -3,7 +3,8 @@ import { galleries, galleryPhotos, getGallery, type Gallery } from "@/lib/mock-d
 import { GalleryManager } from "./gallery-manager";
 
 export function generateStaticParams() {
-  return galleries.map((g) => ({ id: g.id }));
+  // "untitled-draft" is where galleries created in the UI open until they are saved for real.
+  return [...galleries.map((g) => ({ id: g.id })), { id: "untitled-draft" }];
 }
 
 export default function GalleryPage({ params }: PageProps<"/dashboard/galleries/[id]">) {

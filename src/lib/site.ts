@@ -7,3 +7,8 @@ export const site = {
   description:
     "Beautiful client galleries for photographers and artists, stored in the cloud storage you already own.",
 };
+
+/** Prefixes a public/ path with the base path (needed on GitHub Pages). */
+export function asset(path: string) {
+  return path.startsWith("/") ? `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}` : path;
+}

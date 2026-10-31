@@ -86,7 +86,7 @@ export function GalleryGrid({ initial }: { initial: Gallery[] }) {
           return (
             <Link
               key={g.id}
-              href={`/dashboard/galleries/${g.id}`}
+              href={`/dashboard/galleries/${initial.includes(g) ? g.id : "untitled-draft"}`}
               className="group overflow-hidden rounded-3xl border border-white/5 bg-ink-800/60 transition hover:-translate-y-0.5 hover:border-lime/30 hover:shadow-glow"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
