@@ -2,6 +2,7 @@ import { ArrowRight, Check, Cloud, Globe, Heart, KeyRound, Lock, Sparkles, Uploa
 import { ButtonLink, Eyebrow, Photo, ProTag } from "@/components/ui";
 import { photos } from "@/lib/mock-data";
 import { providers } from "@/lib/providers";
+import { site } from "@/lib/site";
 
 const features = [
   {
@@ -155,7 +156,7 @@ export default function HomePage() {
               uploads and deliveries. Switch providers whenever you like.
             </p>
             <ol className="mt-10 space-y-5">
-              {["Create a bucket with your provider", "Paste an access key into Mosslight", "Upload a shoot and share the link"].map(
+              {["Create a bucket with your provider", `Paste an access key into ${site.name}`, "Upload a shoot and share the link"].map(
                 (step, i) => (
                   <li key={step} className="flex items-center gap-4">
                     <span className="grid size-8 place-items-center rounded-full border border-lime/40 font-mono text-xs text-lime">
@@ -200,7 +201,7 @@ export default function HomePage() {
                 $0<span className="text-base text-fog"> / forever</span>
               </p>
               <ul className="mt-8 space-y-3 text-sm text-mist">
-                {["Unlimited galleries", "Connect any storage provider", "Favorites & downloads", "mosslight.app/your-studio link"].map((x) => (
+                {["Unlimited galleries", "Connect any storage provider", "Favorites & downloads", `${site.domain}/your-studio link`].map((x) => (
                   <li key={x} className="flex gap-3"><Check className="size-4 text-lime" /> {x}</li>
                 ))}
               </ul>
@@ -217,7 +218,7 @@ export default function HomePage() {
                 $—<span className="text-base text-fog"> / month</span>
               </p>
               <ul className="mt-8 space-y-3 text-sm text-mist">
-                {["Everything in Seedling", "Custom domain with HTTPS", "Remove Mosslight branding", "Client proofing & print store"].map((x) => (
+                {["Everything in Seedling", "Custom domain with HTTPS", `Remove ${site.name} branding`, "Client proofing & print store"].map((x) => (
                   <li key={x} className="flex gap-3"><Check className="size-4 text-lime" /> {x}</li>
                 ))}
               </ul>

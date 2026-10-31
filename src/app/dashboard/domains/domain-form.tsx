@@ -4,6 +4,7 @@ import { Copy, Globe, Sparkles } from "lucide-react";
 import { useState } from "react";
 import { Button, Pill } from "@/components/ui";
 import { currentUser } from "@/lib/mock-data";
+import { site } from "@/lib/site";
 
 export function DomainForm() {
   const [domain, setDomain] = useState("galleries.verdantlens.studio");
@@ -12,7 +13,7 @@ export function DomainForm() {
 
   const records = [
     { type: "CNAME", name: sub, value: "cname.vercel-dns.com" },
-    { type: "TXT", name: `_mosslight.${sub}`, value: "mosslight-verify=7f3a9c21" },
+    { type: "TXT", name: `_editgenlx.${sub}`, value: "editgenlx-verify=7f3a9c21" },
   ];
 
   return (
@@ -76,7 +77,7 @@ export function DomainForm() {
             You&apos;re on the free Seedling plan. Paid plans are on the way, and you can preview the setup here in the meantime.
           </p>
           <p className="mt-6 font-mono text-xs text-fog">
-            Your galleries live at <span className="text-lime">mosslight.app/verdant-lens</span>
+            Your galleries live at <span className="text-lime">{site.domain}/verdant-lens</span>
           </p>
           <Button disabled className="mt-6 w-full">Upgrade · coming soon</Button>
         </div>

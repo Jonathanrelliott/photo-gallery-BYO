@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Pill, ProTag } from "@/components/ui";
 import { currentUser } from "@/lib/mock-data";
+import { site } from "@/lib/site";
 import { PageHeader } from "../page-header";
 
 export const metadata: Metadata = { title: "Settings" };
@@ -16,7 +17,7 @@ export default function SettingsPage() {
           <ReadOnly label="Your name" value={currentUser.name} />
           <ReadOnly label="Email" value={currentUser.email} />
           <ReadOnly label="Studio name" value={currentUser.studio} />
-          <ReadOnly label="Public URL" value="mosslight.app/verdant-lens" />
+          <ReadOnly label="Public URL" value={`${site.domain}/verdant-lens`} />
         </div>
       </section>
 

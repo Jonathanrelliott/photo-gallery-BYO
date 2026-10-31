@@ -9,13 +9,20 @@ export function cx(...classes: (string | false | null | undefined)[]) {
 export function Logo({ className }: { className?: string }) {
   return (
     <Link href="/" className={cx("group inline-flex items-center gap-2.5", className)}>
-      <span className="relative grid size-8 place-items-center rounded-full bg-moss-800 ring-1 ring-lime/40 transition group-hover:shadow-glow">
-        <svg viewBox="0 0 24 24" className="size-4.5 text-lime" fill="none" stroke="currentColor" strokeWidth="1.8">
-          <path d="M12 21c0-6 0-9 6-14-1 6-2 9-6 14Z" strokeLinejoin="round" />
-          <path d="M12 21c0-5-1-8-6-11 0 5 2 8 6 11Z" strokeLinejoin="round" />
-        </svg>
+      {site.logo ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={site.logo} alt="" className="size-8 rounded-full object-cover ring-1 ring-lime/40 transition group-hover:shadow-glow" />
+      ) : (
+        <span className="relative grid size-8 place-items-center rounded-full bg-moss-800 ring-1 ring-lime/40 transition group-hover:shadow-glow">
+          <svg viewBox="0 0 24 24" className="size-4.5 text-lime" fill="none" stroke="currentColor" strokeWidth="1.8">
+            <path d="M12 21c0-6 0-9 6-14-1 6-2 9-6 14Z" strokeLinejoin="round" />
+            <path d="M12 21c0-5-1-8-6-11 0 5 2 8 6 11Z" strokeLinejoin="round" />
+          </svg>
+        </span>
+      )}
+      <span className="text-lg font-semibold tracking-tight text-white">
+        EditGen<span className="text-lime">lx</span>
       </span>
-      <span className="font-display text-xl tracking-tight text-white">{site.name}</span>
     </Link>
   );
 }

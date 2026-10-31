@@ -1,8 +1,8 @@
 # photo-gallery-BYO
 
-A photo gallery where you bring your own API keys. Photographers and artists connect the cloud storage they already own (S3, R2, B2, GCS, Azure and more), and Mosslight turns it into client galleries.
+A photo gallery where you bring your own API keys. Photographers and artists connect the cloud storage they already own (S3, R2, B2, GCS, Azure and more), and EditGenlx turns it into client galleries.
 
-Working name: **Mosslight**. Theme: *Neon Botanicals: Urban Flora & Digital Moss*.
+Brand: **EditGenlx**. Theme: *Neon Botanicals: Urban Flora & Digital Moss*.
 
 ## Status
 
