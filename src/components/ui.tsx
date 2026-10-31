@@ -11,7 +11,7 @@ export function Logo({ className }: { className?: string }) {
     <Link href="/" className={cx("group inline-flex items-center gap-2.5", className)}>
       {site.logo ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={site.logo} alt="" className="size-8 rounded-full object-cover ring-1 ring-lime/40 transition group-hover:shadow-glow" />
+        <img src={site.logo} alt="" className="size-9 object-contain transition group-hover:drop-shadow-[0_0_10px_rgb(198_255_61/0.6)]" />
       ) : (
         <span className="relative grid size-8 place-items-center rounded-full bg-moss-800 ring-1 ring-lime/40 transition group-hover:shadow-glow">
           <svg viewBox="0 0 24 24" className="size-4.5 text-lime" fill="none" stroke="currentColor" strokeWidth="1.8">
